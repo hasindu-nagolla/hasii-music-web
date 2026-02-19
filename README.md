@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://files.catbox.moe/und0yt.jpg" alt="Hasii Music Bot" width="400"/>
+  <img src="https://files.catbox.moe/7jihmf.png" alt="Hasii Music Bot" width="400"/>
   
   # 🎵 Hasii Music Bot - Official Website
   
