@@ -26,12 +26,12 @@ const Footer = () => {
         href: "https://github.com/hasindu-nagolla/HasiiMusicBot",
       },
       {
-        name: "License (MIT)",
+        name: "License (GPL V3)",
         href: "https://github.com/hasindu-nagolla/HasiiMusicBot/blob/main/LICENSE",
       },
       {
         name: "Project Structure",
-        href: "https://github.com/hasindu-nagolla/HasiiMusicBot/blob/main/PROJECT_STRUCTURE.md",
+        href: "https://github.com/hasindu-nagolla/HasiiMusicBot/blob/main/Structure.md",
       },
     ],
   };
