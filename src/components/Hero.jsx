@@ -5,125 +5,55 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="section-padding min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+      className="pt-32 pb-20 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center text-center max-w-5xl mx-auto"
     >
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-spotify-green/20 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow"
-          style={{ animationDelay: "1.5s" }}
-        ></div>
+      {/* Main Heading */}
+      <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-tight tracking-tight text-brand-dark mb-6 animate-slide-up">
+        Let's build your next <br className="hidden md:block" />
+        <span className="bg-gradient-to-r from-brand-primary to-brand-accent bg-clip-text text-transparent">music experience.</span>
+      </h1>
+
+      <p
+        className="text-xl md:text-2xl text-gray-500 font-light max-w-3xl mb-12 animate-slide-up"
+        style={{ animationDelay: "0.1s" }}
+      >
+        We deliver studio-quality audio from your first voice chat to a planet scale <span className="font-semibold text-brand-dark">Telegram community</span>.
+      </p>
+
+      {/* Tech Stack Header */}
+      <div 
+        className="text-xs font-bold tracking-widest text-brand-primary uppercase mb-6 animate-slide-up"
+        style={{ animationDelay: "0.2s" }}
+      >
+        WE WORK WITH
       </div>
 
-      <div className="max-w-7xl mx-auto text-center relative z-10">
-        {/* Animated Music Icon */}
-        <div className="mb-8 flex justify-center">
-          <div className="relative">
-            {/* Glow (optional — remove if not needed) */}
-            <div className="absolute inset-0 bg-spotify-green rounded-full blur-3xl opacity-20 animate-pulse-slow"></div>
-
-            {/* Rounded Image Only */}
-            <div className="relative animate-float w-32 h-32 overflow-hidden rounded-full bg-spotify-surface">
-              <img
-                src={HasiiLogo}
-                alt="Hasii Music Bot Logo"
-                className="w-full h-full object-cover"
-                width="128"
-                height="128"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                onError={(e) => {
-                  e.target.style.display = "none";
-                  e.target.parentElement.innerHTML =
-                    '<div class="w-full h-full flex items-center justify-center bg-spotify-green text-black text-4xl font-bold">H</div>';
-                }}
-              />
-            </div>
-          </div>
+      {/* Tech Stack Badges */}
+      <div
+        className="flex flex-wrap gap-4 justify-center items-center opacity-70 animate-fade-in grayscale hover:grayscale-0 transition-all duration-500"
+        style={{ animationDelay: "0.3s" }}
+      >
+        {/* Placeholder icons for tech stack (using text/colors for demonstration) */}
+        <div className="flex items-center space-x-2 bg-gray-50 px-4 py-2 rounded-md">
+          <span className="font-bold text-blue-600">Python</span>
         </div>
-
-        {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-slide-up">
-          <span className="text-spotify-green">ʜᴀꜱɪɪ ꭙ ᴍᴜꜱɪᴄ</span>
-        </h1>
-
-        <p
-          className="text-xl md:text-2xl text-gray-300 mb-4 animate-slide-up"
-          style={{ animationDelay: "0.1s" }}
-        >
-          Advanced Telegram Music Streaming Bot
-        </p>
-
-        <p
-          className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-slide-up"
-          style={{ animationDelay: "0.2s" }}
-        >
-          Experience studio-quality audio with YouTube integration, 20+ live Sri
-          Lankan radio stations, and powerful queue management for your Telegram
-          voice chats.
-        </p>
-
-        {/* CTA Buttons */}
-        <div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-slide-up"
-          style={{ animationDelay: "0.3s" }}
-        >
-          <a
-            href="https://t.me/HasiMusicBot?startgroup=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary flex items-center gap-2 group relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-            <MessageCircle className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
-            <span className="relative z-10">Add to Your Group</span>
-            <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-          </a>
-
-          <a
-            href="https://github.com/hasindu-nagolla/HasiiMusicBot"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary flex items-center gap-2 group"
-          >
-            <Github className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-            <span>View on GitHub</span>
-          </a>
+        <div className="flex items-center space-x-2 bg-gray-50 px-4 py-2 rounded-md">
+          <span className="font-bold text-teal-500">Pyrogram</span>
         </div>
-
-        {/* Tech Stack Badges */}
-        <div
-          className="flex flex-wrap gap-3 justify-center animate-fade-in"
-          style={{ animationDelay: "0.4s" }}
-        >
-          {[
-            "Python 3.12+",
-            "Pyrogram",
-            "PyTgCalls",
-            "MongoDB",
-            "yt-dlp",
-            "VPS Ready",
-          ].map((tech) => (
-            <span
-              key={tech}
-              className="glass px-4 py-2 rounded-full text-sm font-medium hover:bg-spotify-surface-light hover:border-spotify-green transition-all duration-300"
-            >
-              {tech}
-            </span>
-          ))}
+        <div className="flex items-center space-x-2 bg-gray-50 px-4 py-2 rounded-md">
+          <span className="font-bold text-green-600">MongoDB</span>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="mt-20 animate-bounce">
-          <a href="#features" className="inline-block">
-            <div className="w-6 h-10 border-2 border-spotify-green/30 rounded-full flex items-start justify-center p-2">
-              <div className="w-1 h-2 bg-spotify-green rounded-full animate-pulse"></div>
-            </div>
-          </a>
+        <div className="flex items-center space-x-2 bg-gray-50 px-4 py-2 rounded-md">
+          <span className="font-bold text-red-500">yt-dlp</span>
+        </div>
+        <div className="flex items-center space-x-2 bg-gray-50 px-4 py-2 rounded-md">
+          <span className="font-bold text-gray-700">Linux</span>
         </div>
       </div>
+      
+      <p className="mt-8 text-sm text-gray-400 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
+        We use cutting-edge frameworks like PyTgCalls and advanced caching mechanisms built to handle high-demand workloads seamlessly.
+      </p>
     </section>
   );
 };

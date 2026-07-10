@@ -57,21 +57,14 @@ const Commands = () => {
   return (
     <section
       id="commands"
-      className="section-padding bg-black/30 relative overflow-hidden"
+      className="py-24 bg-white relative overflow-hidden border-t border-gray-100"
     >
-      {/* Animated gradient orbs */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-      <div
-        className="absolute bottom-0 right-0 w-96 h-96 bg-spotify-green/10 rounded-full blur-3xl animate-pulse-slow"
-        style={{ animationDelay: "2s" }}
-      ></div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-spotify-green">Command Reference</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
+            Command Reference
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-500 text-lg">
             Complete list of available commands organized by permission level
           </p>
         </div>
@@ -84,10 +77,10 @@ const Commands = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 border ${
                   activeTab === key
-                    ? "bg-spotify-green text-black shadow-lg shadow-spotify-green/50 scale-105"
-                    : "glass hover:bg-spotify-surface-light hover:border-spotify-green"
+                    ? "bg-brand-primary border-brand-primary text-white shadow-md shadow-brand-primary/30 transform -translate-y-1"
+                    : "bg-white border-gray-200 text-gray-600 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface"
                 }`}
               >
                 <Icon className="w-5 h-5" />
@@ -102,19 +95,16 @@ const Commands = () => {
           {commandCategories[activeTab].commands.map((command, index) => (
             <div
               key={index}
-              className="group glass p-6 rounded-xl hover:bg-white/15 transition-all duration-300 animate-scale-in relative overflow-hidden hover:border-spotify-green/50"
+              className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-brand-primary/30 transition-all duration-300 relative overflow-hidden"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              {/* Hover gradient effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-spotify-green/0 to-spotify-green/0 group-hover:from-spotify-green/10 group-hover:to-transparent transition-all duration-500"></div>
-
               <div className="flex items-start gap-3 relative z-10">
-                <Terminal className="w-5 h-5 text-spotify-green mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <Terminal className="w-5 h-5 text-brand-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <div>
-                  <code className="text-lg font-mono text-spotify-green font-semibold group-hover:text-spotify-green-light transition-colors">
+                  <code className="text-lg font-mono text-brand-dark font-bold group-hover:text-brand-primary transition-colors">
                     {command.cmd}
                   </code>
-                  <p className="text-gray-400 mt-2 text-sm group-hover:text-gray-300 transition-colors">
+                  <p className="text-gray-500 mt-2 text-sm">
                     {command.desc}
                   </p>
                 </div>
@@ -124,31 +114,28 @@ const Commands = () => {
         </div>
 
         {/* Command Usage Note */}
-        <div className="mt-12 glass p-6 rounded-xl">
-          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-            <Terminal className="w-5 h-5 text-spotify-green" />
-            𝐔𝐬𝐚𝐠𝐞 𝐍𝐨𝐭𝐞𝐬
+        <div className="mt-12 bg-brand-surface border border-brand-accent/50 p-6 rounded-xl max-w-3xl mx-auto">
+          <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-brand-dark">
+            <Terminal className="w-5 h-5 text-brand-primary" />
+            Usage Notes
           </h3>
-          <ul className="space-y-2 text-gray-400">
+          <ul className="space-y-2 text-gray-600 text-sm">
             <li className="flex items-start gap-2">
-              <span className="text-spotify-green mt-1">•</span>
+              <span className="text-brand-primary mt-1 font-bold">•</span>
               <span>
-                𝐀𝐝𝐦𝐢𝐧 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐫𝐞𝐪𝐮𝐢𝐫𝐞 𝐚𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐭𝐨𝐫 𝐩𝐫𝐢𝐯𝐢𝐥𝐞𝐠𝐞𝐬 𝐢𝐧 𝐭𝐡𝐞 𝐠𝐫𝐨𝐮𝐩
+                Admin commands require administrator privileges in the group
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-spotify-green mt-1">•</span>
+              <span className="text-brand-primary mt-1 font-bold">•</span>
               <span>
-                𝐒𝐮𝐝𝐨 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐚𝐫𝐞 𝐫𝐞𝐬𝐭𝐫𝐢𝐜𝐭𝐞𝐝 𝐭𝐨 𝐛𝐨𝐭 𝐨𝐰𝐧𝐞𝐫 𝐚𝐧𝐝 𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐳𝐞𝐝 𝐬𝐮𝐝𝐨
-                𝐮𝐬𝐞𝐫𝐬
+                Sudo commands are restricted to bot owner and authorized sudo users
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-spotify-green mt-1">•</span>
+              <span className="text-brand-primary mt-1 font-bold">•</span>
               <span>
-                𝐔𝐬𝐞{" "}
-                <code className="text-spotify-green font-mono px-1">/𝐡𝐞𝐥𝐩</code>{" "}
-                𝐢𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐭𝐨 𝐬𝐞𝐞 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝐞𝐱𝐚𝐦𝐩𝐥𝐞𝐬 𝐚𝐧𝐝 𝐬𝐲𝐧𝐭𝐚𝐱
+                Use <code className="text-brand-primary font-mono px-1 font-semibold">/help</code> in Telegram to see command examples and syntax
               </span>
             </li>
           </ul>

@@ -7,12 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        spotify: {
-          green: '#1DB954',
-          'green-light': '#1ED760',
-          dark: '#121212',
-          surface: '#181818',
-          'surface-light': '#282828',
+        brand: {
+          primary: '#10B981', // emerald-500
+          secondary: '#059669', // emerald-600 (Forest green)
+          accent: '#D1FAE5', // emerald-100 (Mint)
+          dark: '#111827',
+          surface: '#F9FAFB',
+          'surface-light': '#FFFFFF',
         },
         primary: {
           50: '#e6f9f0',

@@ -11,8 +11,7 @@ import FloatingCTA from "./components/FloatingCTA";
 function App() {
   return (
     <Router>
-      <div className="relative min-h-screen overflow-hidden">
-        <ParticlesBackground />
+      <div className="relative min-h-screen bg-brand-surface-light text-brand-dark overflow-hidden font-sans">
         <Navbar />
         <main className="relative z-10">
           <Hero />

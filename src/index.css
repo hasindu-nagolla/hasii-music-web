@@ -4,8 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-spotify-dark;
-    @apply text-white antialiased;
+    @apply bg-brand-surface-light text-brand-dark antialiased;
     @apply min-h-screen;
     font-family:
       "Inter",
@@ -36,36 +35,35 @@
 
 @layer components {
   .glass {
-    @apply bg-spotify-surface/80 backdrop-blur-lg border border-spotify-surface-light;
+    @apply bg-white border border-gray-100 shadow-sm;
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-spotify-green via-spotify-green-light to-spotify-green bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-brand-primary to-brand-accent bg-clip-text text-transparent;
   }
 
   .btn-primary {
     @apply px-6 py-3 rounded-full font-semibold;
-    @apply bg-spotify-green text-black;
-    @apply hover:bg-spotify-green-light;
-    @apply transform hover:scale-105 transition-all duration-300;
-    @apply shadow-lg hover:shadow-xl hover:shadow-spotify-green/50;
+    @apply bg-brand-primary text-white;
+    @apply hover:bg-brand-secondary;
+    @apply transform hover:-translate-y-1 transition-all duration-300;
+    @apply shadow-md hover:shadow-lg hover:shadow-brand-primary/30;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 rounded-full font-semibold;
-    @apply glass hover:bg-spotify-surface-light;
-    @apply transform hover:scale-105 transition-all duration-300;
+    @apply px-6 py-3 rounded-full font-semibold text-brand-dark;
+    @apply bg-white border border-gray-200 hover:border-brand-primary hover:bg-brand-surface;
+    @apply transform hover:-translate-y-1 transition-all duration-300;
   }
 
   .feature-card {
-    @apply glass p-6 rounded-2xl;
-    @apply transform hover:scale-105 transition-all duration-300;
-    @apply hover:shadow-2xl hover:shadow-spotify-green/20;
-    @apply hover:border-spotify-green/50;
+    @apply bg-white p-6 rounded-2xl border border-gray-100 shadow-sm relative z-10;
+    @apply transform transition-all duration-300;
+    @apply hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-primary/10;
   }
 
   .section-padding {
-    @apply py-20 px-4 md:px-8 lg:px-16;
+    @apply py-24 px-4 md:px-8 lg:px-16;
   }
 }
 
@@ -75,67 +73,44 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: #F9FAFB;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #1db954, #1ed760);
+  background: #10B981;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #1aa34a, #1bc154);
+  background: #059669;
 }
 
 /* Enhanced animations */
-@keyframes pulse-slow {
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(1.05);
-  }
+@keyframes slideUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
+@keyframes slideDown {
+  0% { transform: translateY(-40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes glow {
-  0%,
-  100% {
-    box-shadow: 0 0 20px rgba(29, 185, 84, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 40px rgba(29, 185, 84, 0.6);
-  }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 4s ease-in-out infinite;
+.animate-slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.animate-shimmer {
-  animation: shimmer 3s linear infinite;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.1),
-    transparent
-  );
-  background-size: 1000px 100%;
+.animate-slide-down {
+  animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.animate-glow {
-  animation: glow 2s ease-in-out infinite;
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 /* Reduced motion support */

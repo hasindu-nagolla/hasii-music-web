@@ -33,14 +33,14 @@ const FloatingCTA = () => {
       >
         <div className="relative group">
           {/* Pulsing ring effect */}
-          <div className="absolute inset-0 rounded-full bg-spotify-green animate-ping opacity-75"></div>
+          <div className="absolute inset-0 rounded-full bg-brand-primary animate-ping opacity-50"></div>
 
           {/* Main button */}
           <a
             href="https://t.me/HasiMusicBot?startgroup=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center gap-2 px-6 py-4 bg-spotify-green text-black font-semibold rounded-full shadow-2xl hover:bg-spotify-green-light transition-all duration-300 group-hover:scale-110 hover:shadow-spotify-green/50"
+            className="relative flex items-center gap-2 px-6 py-4 bg-brand-primary text-white font-semibold rounded-full shadow-2xl hover:bg-brand-secondary transition-all duration-300 group-hover:scale-110 hover:shadow-brand-primary/50"
           >
             <MessageCircle className="w-5 h-5" />
             <span className="hidden sm:inline">Quick Start</span>
@@ -49,7 +49,7 @@ const FloatingCTA = () => {
           {/* Dismiss button */}
           <button
             onClick={() => setIsDismissed(true)}
-            className="absolute -top-2 -right-2 p-1 bg-red-500 rounded-full text-white hover:bg-red-600 transition-colors duration-200 opacity-0 group-hover:opacity-100"
+            className="absolute -top-2 -right-2 p-1 bg-gray-200 rounded-full text-gray-500 hover:bg-gray-300 hover:text-gray-700 transition-colors duration-200 opacity-0 group-hover:opacity-100"
             aria-label="Dismiss"
           >
             <X className="w-3 h-3" />
