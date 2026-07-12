@@ -83,7 +83,7 @@ const Stats = () => {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="group relative bg-white p-8 rounded-2xl text-center transform transition-all duration-300 border border-gray-100 hover:border-brand-primary hover:shadow-xl hover:-translate-y-1"
+                className="group relative bg-white p-8 rounded-xl text-center border border-gray-100 hover:border-gray-300 transition-colors duration-200"
                 style={{
                   animationDelay: `${index * 0.1}s`,
                 }}

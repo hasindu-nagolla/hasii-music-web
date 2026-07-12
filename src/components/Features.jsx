@@ -15,7 +15,7 @@ const Features = () => {
         <div className="relative mb-32">
           {/* Step indicator */}
           <div className="flex flex-col items-center mb-12 relative z-10">
-            <div className="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-brand-primary/30 mb-4">
+            <div className="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
               1
             </div>
             <div className="text-brand-primary font-semibold mb-2">Setup & Connect</div>
@@ -64,7 +64,7 @@ const Features = () => {
         <div className="relative mb-32">
           {/* Step indicator */}
           <div className="flex flex-col items-center mb-12 relative z-10">
-            <div className="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-brand-primary/30 mb-4">
+            <div className="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
               2
             </div>
             <div className="text-brand-primary font-semibold mb-2">High-Quality Playback</div>
@@ -113,7 +113,7 @@ const Features = () => {
         <div className="relative">
           {/* Step indicator */}
           <div className="flex flex-col items-center mb-12 relative z-10">
-            <div className="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-brand-primary/30 mb-4">
+            <div className="w-12 h-12 bg-brand-dark text-white rounded-full flex items-center justify-center font-bold text-xl mb-4">
               3
             </div>
             <div className="text-brand-primary font-semibold mb-2">Advanced Management</div>

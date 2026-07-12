@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Main Heading */}
       <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-tight tracking-tight text-brand-dark mb-6 animate-slide-up">
         Let's build your next <br className="hidden md:block" />
-        <span className="bg-gradient-to-r from-brand-primary to-brand-accent bg-clip-text text-transparent">music experience.</span>
+        <span className="text-brand-primary">music experience.</span>
       </h1>
 
       <p

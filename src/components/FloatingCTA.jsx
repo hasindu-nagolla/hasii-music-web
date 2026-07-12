@@ -32,15 +32,12 @@ const FloatingCTA = () => {
         }`}
       >
         <div className="relative group">
-          {/* Pulsing ring effect */}
-          <div className="absolute inset-0 rounded-full bg-brand-primary animate-ping opacity-50"></div>
-
           {/* Main button */}
           <a
             href="https://t.me/HasiMusicBot?startgroup=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center gap-2 px-6 py-4 bg-brand-primary text-white font-semibold rounded-full shadow-2xl hover:bg-brand-secondary transition-all duration-300 group-hover:scale-110 hover:shadow-brand-primary/50"
+            className="relative flex items-center gap-2 px-6 py-4 bg-brand-dark text-white font-semibold rounded-full shadow-md hover:bg-gray-800 active:scale-95 transition-all duration-200"
           >
             <MessageCircle className="w-5 h-5" />
             <span className="hidden sm:inline">Quick Start</span>

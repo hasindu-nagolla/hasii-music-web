@@ -49,7 +49,7 @@ const Footer = () => {
           href="https://t.me/hasiimusic" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-block px-8 py-4 rounded-full font-bold text-white bg-gradient-to-r from-brand-primary to-brand-accent shadow-lg shadow-brand-primary/30 hover:shadow-xl hover:shadow-brand-primary/50 transform hover:-translate-y-1 transition-all duration-300"
+          className="inline-block px-8 py-4 rounded-md font-semibold text-white bg-brand-dark hover:bg-gray-800 active:scale-95 transition-all duration-200"
         >
           Get in touch
         </a>

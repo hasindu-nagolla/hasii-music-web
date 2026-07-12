@@ -77,10 +77,10 @@ const Commands = () => {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 border ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-md font-semibold transition-all duration-200 border ${
                   activeTab === key
-                    ? "bg-brand-primary border-brand-primary text-white shadow-md shadow-brand-primary/30 transform -translate-y-1"
-                    : "bg-white border-gray-200 text-gray-600 hover:border-brand-primary hover:text-brand-primary hover:bg-brand-surface"
+                    ? "bg-brand-dark border-brand-dark text-white"
+                    : "bg-white border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50"
                 }`}
               >
                 <Icon className="w-5 h-5" />
@@ -95,13 +95,13 @@ const Commands = () => {
           {commandCategories[activeTab].commands.map((command, index) => (
             <div
               key={index}
-              className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-brand-primary/30 transition-all duration-300 relative overflow-hidden"
+              className="group bg-white p-6 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors duration-200 relative overflow-hidden"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <div className="flex items-start gap-3 relative z-10">
-                <Terminal className="w-5 h-5 text-brand-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <Terminal className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
                 <div>
-                  <code className="text-lg font-mono text-brand-dark font-bold group-hover:text-brand-primary transition-colors">
+                  <code className="text-lg font-mono text-brand-dark font-bold">
                     {command.cmd}
                   </code>
                   <p className="text-gray-500 mt-2 text-sm">
