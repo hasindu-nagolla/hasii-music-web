@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Music } from "lucide-react";
-import FooterImage from "../assets/Hasii.png";
+import { Menu, X } from "lucide-react";
+import logo from "../assets/download.svg"
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,13 +30,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center space-x-2 group">
-            <div className="p-2 rounded-lg bg-black text-white group-hover:bg-brand-primary transition-all duration-300">
-              <Music className="w-5 h-5" />
-            </div>
-            <span className="text-xl font-bold text-black">
-              hasii<span className="font-light">music</span>
-            </span>
+          <a href="#home">
+            <img
+            src={logo}
+            alt="HasiiMusic"
+            className="h-12 w-auto"/>
           </a>
 
           {/* Desktop Navigation */}

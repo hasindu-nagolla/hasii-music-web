@@ -1,5 +1,4 @@
 import { Music, Github, MessageCircle, ArrowRight } from "lucide-react";
-import HasiiLogo from "../assets/Hasii.png";
 
 const Hero = () => {
   return (
@@ -17,11 +16,16 @@ const Hero = () => {
         className="text-xl md:text-2xl text-gray-500 font-light max-w-3xl mb-12 animate-slide-up"
         style={{ animationDelay: "0.1s" }}
       >
-        We deliver studio-quality audio from your first voice chat to a planet scale <span className="font-semibold text-brand-dark">Telegram community</span>.
+        We deliver studio-quality audio from your first voice chat to a planet
+        scale{" "}
+        <span className="font-semibold text-brand-dark">
+          Telegram community
+        </span>
+        .
       </p>
 
       {/* Tech Stack Header */}
-      <div 
+      <div
         className="text-xs font-bold tracking-widest text-brand-primary uppercase mb-6 animate-slide-up"
         style={{ animationDelay: "0.2s" }}
       >
@@ -50,9 +54,13 @@ const Hero = () => {
           <span className="font-bold text-gray-700">Linux</span>
         </div>
       </div>
-      
-      <p className="mt-8 text-sm text-gray-400 max-w-2xl animate-fade-in" style={{ animationDelay: "0.4s" }}>
-        We use cutting-edge frameworks like PyTgCalls and advanced caching mechanisms built to handle high-demand workloads seamlessly.
+
+      <p
+        className="mt-8 text-sm text-gray-400 max-w-2xl animate-fade-in"
+        style={{ animationDelay: "0.4s" }}
+      >
+        We use cutting-edge frameworks like PyTgCalls and advanced caching
+        mechanisms built to handle high-demand workloads seamlessly.
       </p>
     </section>
   );

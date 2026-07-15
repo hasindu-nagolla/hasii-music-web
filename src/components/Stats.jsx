@@ -65,7 +65,10 @@ const Stats = () => {
   }, []);
 
   return (
-    <section id="stats" className="py-24 bg-brand-surface relative overflow-hidden">
+    <section
+      id="stats"
+      className="py-24 bg-brand-surface relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
@@ -92,15 +95,13 @@ const Stats = () => {
                   <Icon className="w-8 h-8" />
                 </div>
                 <div className="text-4xl font-bold mb-2 text-brand-dark">
-                  {stat.key === 'songs' 
-                    ? Math.floor(counters[stat.key] / 1000) + 'K+' 
-                    : stat.key === 'uptime' 
-                      ? counters[stat.key] + '%' 
-                      : counters[stat.key] + '+'}
+                  {stat.key === "songs"
+                    ? Math.floor(counters[stat.key] / 1000) + "K+"
+                    : stat.key === "uptime"
+                      ? counters[stat.key] + "%"
+                      : counters[stat.key] + "+"}
                 </div>
-                <div className="text-gray-500 font-medium">
-                  {stat.label}
-                </div>
+                <div className="text-gray-500 font-medium">{stat.label}</div>
               </div>
             );
           })}

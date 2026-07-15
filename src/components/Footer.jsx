@@ -1,4 +1,5 @@
-import { Github, MessageCircle, ExternalLink, Music } from "lucide-react";
+import { Github, MessageCircle, ExternalLink } from "lucide-react";
+import FooterLogo from "../assets/download.svg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,16 +39,18 @@ const Footer = () => {
 
   return (
     <footer className="relative z-10 bg-brand-surface-light border-t border-gray-100 mt-20">
-      
       {/* Huge Pre-Footer CTA */}
       <div className="py-24 text-center">
-        <h2 className="text-3xl font-bold text-brand-dark mb-4">How can we help?</h2>
+        <h2 className="text-3xl font-bold text-brand-dark mb-4">
+          How can we help?
+        </h2>
         <p className="text-gray-500 mb-8 max-w-md mx-auto">
-          Let's have a quick chat or connect with us instantly to set up your Telegram community.
+          Let's have a quick chat or connect with us instantly to set up your
+          Telegram community.
         </p>
-        <a 
-          href="https://t.me/hasiimusic" 
-          target="_blank" 
+        <a
+          href="https://t.me/hasiimusic"
+          target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-4 rounded-md font-semibold text-white bg-brand-dark hover:bg-gray-800 active:scale-95 transition-all duration-200"
         >
@@ -60,14 +63,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="p-2 rounded-lg bg-black">
-                <Music className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-black">
-                hasii<span className="font-light">music</span>
-              </span>
-            </div>
+            <a href="#home">
+              <img
+                src={FooterLogo}
+                alt="footer-image"
+                className="h-11"
+                w-auto
+              />
+            </a>
             <p className="text-gray-500 text-sm mb-4">
               Advanced Telegram music streaming bot with studio-quality audio
               and powerful features.
@@ -173,14 +176,7 @@ const Footer = () => {
                 Hasindu Nagolla.
               </a>
             </p>
-            <div className="flex items-center gap-6 text-sm text-gray-500">
-              <a
-                href="#home"
-                className="hover:text-brand-primary transition-colors"
-              >
-                Back to Top ↑
-              </a>
-            </div>
+            <div className="flex items-center gap-6 text-sm text-gray-500"></div>
           </div>
         </div>
       </div>

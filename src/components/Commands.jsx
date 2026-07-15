@@ -22,7 +22,7 @@ const Commands = () => {
         { cmd: "/queue", desc: "View current queue and now playing track" },
         { cmd: "/ping", desc: "Check bot status and system statistics" },
         { cmd: "/help", desc: "Display help menu with all commands" },
-        { cmd: "/lang", desc: "Change bot language (English/Sinhala)" },
+        { cmd: "/lang (Upcoming)", desc: "Change bot language (English/Sinhala)" },
       ],
     },
     admin: {
@@ -104,9 +104,7 @@ const Commands = () => {
                   <code className="text-lg font-mono text-brand-dark font-bold">
                     {command.cmd}
                   </code>
-                  <p className="text-gray-500 mt-2 text-sm">
-                    {command.desc}
-                  </p>
+                  <p className="text-gray-500 mt-2 text-sm">{command.desc}</p>
                 </div>
               </div>
             </div>
@@ -129,13 +127,18 @@ const Commands = () => {
             <li className="flex items-start gap-2">
               <span className="text-brand-primary mt-1 font-bold">•</span>
               <span>
-                Sudo commands are restricted to bot owner and authorized sudo users
+                Sudo commands are restricted to bot owner and authorized sudo
+                users
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-brand-primary mt-1 font-bold">•</span>
               <span>
-                Use <code className="text-brand-primary font-mono px-1 font-semibold">/help</code> in Telegram to see command examples and syntax
+                Use{" "}
+                <code className="text-brand-primary font-mono px-1 font-semibold">
+                  /help
+                </code>{" "}
+                in Telegram to see command examples and syntax
               </span>
             </li>
           </ul>
