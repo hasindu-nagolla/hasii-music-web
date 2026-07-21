@@ -14,8 +14,8 @@ const Stats = () => {
     {
       icon: Users,
       label: "Active Groups",
-      value: "480+",
-      target: 480,
+      value: "520+",
+      target: 520,
       key: "groups",
     },
     {
@@ -75,7 +75,7 @@ const Stats = () => {
             Trusted by the community
           </h2>
           <p className="text-gray-500 text-lg">
-            Join the growing network of Sri Lankan music lovers
+            Join the growing network of music lovers around the world on Telegram
           </p>
         </div>
 

@@ -173,7 +173,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-brand-primary font-medium hover:text-brand-secondary transition-colors"
               >
-                Hasindu Nagolla.
+                Hasindu
               </a>
             </p>
             <div className="flex items-center gap-6 text-sm text-gray-500"></div>

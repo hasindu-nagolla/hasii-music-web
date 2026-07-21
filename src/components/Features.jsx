@@ -34,12 +34,10 @@ const Features = () => {
               Setup & Connect
             </div>
             <h2 className="text-3xl font-bold text-brand-dark">
-              Seamless Integration
+              Quick Setup
             </h2>
             <p className="text-gray-500 mt-4 max-w-2xl text-center">
-              Transform your group chat into a vibrant music hub. We collaborate
-              with you to understand your requirements, ensuring a clean and
-              easy setup to launch your bot successfully.
+              Add the bot to your group and start playing music immediately.
             </p>
           </div>
 
@@ -97,12 +95,10 @@ const Features = () => {
               High-Quality Playback
             </div>
             <h2 className="text-3xl font-bold text-brand-dark">
-              Unlocking the best audio
+              High-Quality Playback
             </h2>
             <p className="text-gray-500 mt-4 max-w-2xl text-center">
-              Achieve crystal clear audio through optimized PyTgCalls streams.
-              We support various sources and formats, continually optimizing
-              until you find the perfect groove.
+              Stream directly from YouTube and radio stations with crisp, uninterrupted audio.
             </p>
           </div>
 
@@ -159,12 +155,10 @@ const Features = () => {
               Advanced Management
             </div>
             <h2 className="text-3xl font-bold text-brand-dark">
-              Scale beyond boundaries
+              Built for Scale
             </h2>
             <p className="text-gray-500 mt-4 max-w-2xl text-center">
-              Scale confidently with enterprise-grade queue management. We
-              implement the best controls to ensure your community can handle
-              rapid growth while maintaining order.
+              Manage large playlists and user requests with built-in queue controls.
             </p>
           </div>
 
@@ -177,9 +171,7 @@ const Features = () => {
               </div>
               <h3 className="font-bold text-brand-dark mb-2">Smart Queue</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Handle exponential user interactions seamlessly. Easy skip,
-                pause, resume, and loop functions designed to manage massive
-                playlists automatically.
+                Easily skip, pause, resume, and loop tracks to manage large playlists.
               </p>
             </div>
             {/* Card 2 */}

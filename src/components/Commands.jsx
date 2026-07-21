@@ -43,7 +43,7 @@ const Commands = () => {
       title: "Sudo Commands",
       icon: Shield,
       commands: [
-        { cmd: "/stats", desc: "View comprehensive bot statistics" },
+        { cmd: "/stats", desc: "View bot statistics" },
         { cmd: "/broadcast", desc: "Send message to all bot users" },
         { cmd: "/addsudo", desc: "Grant sudo privileges to user" },
         { cmd: "/blacklist", desc: "Block user or chat from using bot" },

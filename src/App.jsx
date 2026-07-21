@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Commands from "./components/Commands";
 import Stats from "./components/Stats";
+import OpenSource from "./components/OpenSource";
 import Footer from "./components/Footer";
 import ParticlesBackground from "./components/ParticlesBackground";
 import FloatingCTA from "./components/FloatingCTA";
@@ -18,6 +19,7 @@ function App() {
           <Features />
           <Stats />
           <Commands />
+          <OpenSource />
         </main>
         <Footer />
         <FloatingCTA />

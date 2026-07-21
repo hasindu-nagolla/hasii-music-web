@@ -59,8 +59,7 @@ const Hero = () => {
         className="mt-8 text-sm text-gray-400 max-w-2xl animate-fade-in"
         style={{ animationDelay: "0.4s" }}
       >
-        We use cutting-edge frameworks like PyTgCalls and advanced caching
-        mechanisms built to handle high-demand workloads seamlessly.
+        Built with PyTgCalls and custom caching to handle high-demand workloads without buffering.
       </p>
     </section>
   );
