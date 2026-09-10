@@ -10,195 +10,87 @@ import {
   Languages,
 } from "lucide-react";
 
+const featuresList = [
+  {
+    icon: Zap,
+    title: "Fast Installation",
+    desc: "Add to your group in seconds. Validate requirements and get started without complex configurations.",
+  },
+  {
+    icon: Shield,
+    title: "Admin Security",
+    desc: "Secure role-based access. Only authorized admins can manage playback, protecting from abuse.",
+  },
+  {
+    icon: Globe,
+    title: "VPS Ready",
+    desc: "Built on a solid foundation. Our optimized stack ensures scalability and 24/7 uptime.",
+  },
+  {
+    icon: Play,
+    title: "YouTube Support",
+    desc: "Play any track directly from YouTube. Run rapid commands to fetch any song instantly.",
+  },
+  {
+    icon: Radio,
+    title: "Live Radio",
+    desc: "70+ live Sri Lankan radio stations built-in. Switch seamlessly between different broadcasters.",
+  },
+  {
+    icon: Headphones,
+    title: "Studio Quality",
+    desc: "Ship features quickly with crisp audio. Advanced codecs and caching ensure zero buffering.",
+  },
+  {
+    icon: ListMusic,
+    title: "Smart Queue",
+    desc: "Easily skip, pause, resume, and loop tracks to effortlessly manage large playlists.",
+  },
+  {
+    icon: Sliders,
+    title: "Audio Filters",
+    desc: "Customize sound with advanced filters. We implement bass boost, nightcore, and speed controls.",
+  },
+  {
+    icon: Languages,
+    title: "Multilingual",
+    desc: "Stay ahead with fully translated interfaces. Multiple languages supported for international audiences.",
+  },
+];
+
 const Features = () => {
   return (
-    <section id="features" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <div className="text-xs font-bold tracking-widest text-brand-primary uppercase mb-4">
-          EXPLORE HOW WE WORK
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Center Vertical Line (Hidden on mobile) */}
-        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent -translate-x-1/2"></div>
-
-        {/* Step 1 */}
-        <div className="relative mb-32">
-          {/* Step indicator */}
-          <div className="flex flex-col items-center mb-12 relative z-10">
-            <div className="w-12 h-12 bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark rounded-full flex items-center justify-center font-bold text-xl mb-4">
-              1
-            </div>
-            <div className="text-brand-primary font-semibold mb-2">
-              Setup & Connect
-            </div>
-            <h2 className="text-3xl font-bold text-brand-dark dark:text-white">
-              Quick Setup
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 mt-4 max-w-2xl text-center">
-              Add the bot to your group and start playing music immediately.
-            </p>
-          </div>
-
-          {/* Cards for Step 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-            {/* Card 1 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Zap className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">
-                Fast Installation
-              </h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Add to your group in seconds. We help you validate your
-                requirements and get started without any complex configurations
-                before building your community.
-              </p>
-            </div>
-            {/* Card 2 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Shield className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">Admin Security</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Secure role-based access. Only authorized admins can manage
-                playback and settings, protecting your community from spam and
-                abuse.
-              </p>
-            </div>
-            {/* Card 3 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Globe className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">VPS Ready</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Built on a solid foundation with proven open-source
-                technologies. Our optimized tech stack ensures scalability and
-                long-term 24/7 uptime.
-              </p>
-            </div>
-          </div>
+    <section id="features" className="py-24 bg-brand-surface dark:bg-slate-950 relative border-t border-brand-border dark:border-brand-border-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 max-w-2xl">
+          <h2 className="text-sm font-bold tracking-widest text-brand-primary uppercase mb-3 animate-slide-up">
+            Core Architecture
+          </h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-brand-dark dark:text-white leading-tight animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            Built for performance, security, and scale.
+          </h3>
         </div>
 
-        {/* Step 2 */}
-        <div className="relative mb-32">
-          {/* Step indicator */}
-          <div className="flex flex-col items-center mb-12 relative z-10">
-            <div className="w-12 h-12 bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark rounded-full flex items-center justify-center font-bold text-xl mb-4">
-              2
-            </div>
-            <div className="text-brand-primary font-semibold mb-2">
-              High-Quality Playback
-            </div>
-            <h2 className="text-3xl font-bold text-brand-dark dark:text-white">
-              High-Quality Playback
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 mt-4 max-w-2xl text-center">
-              Stream directly from YouTube and radio stations with crisp, uninterrupted audio.
-            </p>
-          </div>
-
-          {/* Cards for Step 2 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-            {/* Card 1 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Play className="w-5 h-5" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-border dark:bg-brand-border-dark border border-brand-border dark:border-brand-border-dark overflow-hidden rounded-sm">
+          {featuresList.map((feat, idx) => {
+            const Icon = feat.icon;
+            return (
+              <div 
+                key={idx} 
+                className="group bg-white dark:bg-brand-dark p-8 hover:bg-slate-50 dark:hover:bg-slate-900/80 transition-colors duration-300 relative"
+              >
+                <div className="relative z-10">
+                  <Icon className="w-6 h-6 text-slate-400 group-hover:text-brand-primary transition-colors duration-300 mb-6" />
+                  <h4 className="text-lg font-semibold text-brand-dark dark:text-white mb-2">
+                    {feat.title}
+                  </h4>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    {feat.desc}
+                  </p>
+                </div>
               </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">
-                YouTube Support
-              </h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Play any track directly from YouTube. Run rapid commands to
-                fetch any song instantly without leaving your Telegram chat.
-              </p>
-            </div>
-            {/* Card 2 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Radio className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">Live Radio</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                70+ live Sri Lankan radio stations built-in. Make informed
-                choices and switch seamlessly between different broadcasters
-                globally.
-              </p>
-            </div>
-            {/* Card 3 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Headphones className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">Studio Quality</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Ship features quickly with crisp audio. We implement advanced
-                codecs and continuous caching to ensure your music never
-                buffers.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Step 3 */}
-        <div className="relative">
-          {/* Step indicator */}
-          <div className="flex flex-col items-center mb-12 relative z-10">
-            <div className="w-12 h-12 bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark rounded-full flex items-center justify-center font-bold text-xl mb-4">
-              3
-            </div>
-            <div className="text-brand-primary font-semibold mb-2">
-              Advanced Management
-            </div>
-            <h2 className="text-3xl font-bold text-brand-dark dark:text-white">
-              Built for Scale
-            </h2>
-            <p className="text-gray-500 dark:text-gray-400 mt-4 max-w-2xl text-center">
-              Manage large playlists and user requests with built-in queue controls.
-            </p>
-          </div>
-
-          {/* Cards for Step 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-            {/* Card 1 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <ListMusic className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">Smart Queue</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Easily skip, pause, resume, and loop tracks to manage large playlists.
-              </p>
-            </div>
-            {/* Card 2 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Sliders className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">Audio Filters</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Customize your sound with advanced audio filters. We implement
-                bass boost, nightcore, and speed controls for ultimate playback
-                flexibility.
-              </p>
-            </div>
-            {/* Card 3 */}
-            <div className="feature-card flex flex-col items-start text-left">
-              <div className="w-10 h-10 rounded-md bg-brand-accent dark:bg-brand-primary/20 flex items-center justify-center mb-4 text-brand-secondary dark:text-brand-primary">
-                <Languages className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-brand-dark dark:text-white mb-2">Multilingual</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                Stay ahead of issues with fully translated interfaces. We
-                support multiple languages, ensuring zero downtime for your
-                international audience.
-              </p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>

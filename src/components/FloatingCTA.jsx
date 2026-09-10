@@ -37,7 +37,7 @@ const FloatingCTA = () => {
             href="https://t.me/hasiimusic"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center gap-2 px-6 py-4 bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark font-semibold rounded-full shadow-md hover:bg-gray-800 dark:hover:bg-brand-primary/90 active:scale-95 transition-all duration-200"
+            className="relative flex items-center gap-2 px-6 py-3.5 bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark font-semibold rounded-sm shadow-lg hover:bg-slate-800 dark:hover:bg-brand-primary/90 active:scale-[0.98] transition-all duration-200"
           >
             <MessageCircle className="w-5 h-5" />
             <span className="hidden sm:inline">Quick Start</span>

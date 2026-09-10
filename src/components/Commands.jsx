@@ -1,17 +1,12 @@
 import { useState } from "react";
-import {
-  Play,
-  Settings,
-  Shield,
-  Terminal,
-} from "lucide-react";
+import { Play, Settings, Shield, Command as CmdIcon } from "lucide-react";
 
 const Commands = () => {
   const [activeTab, setActiveTab] = useState("user");
 
   const commandCategories = {
     user: {
-      title: "User Commands",
+      title: "User",
       icon: Play,
       commands: [
         { cmd: "/play", desc: "Play a song from YouTube URL or search query" },
@@ -19,11 +14,11 @@ const Commands = () => {
         { cmd: "/queue", desc: "View current queue and now playing track" },
         { cmd: "/ping", desc: "Check bot status and system statistics" },
         { cmd: "/help", desc: "Display help menu with all commands" },
-        { cmd: "/lang (Upcoming)", desc: "Change bot language (English/Sinhala)" },
+        { cmd: "/lang", desc: "Change bot language (English/Sinhala)" },
       ],
     },
     admin: {
-      title: "Admin Commands",
+      title: "Admin",
       icon: Settings,
       commands: [
         { cmd: "/pause", desc: "Pause current audio stream" },
@@ -37,7 +32,7 @@ const Commands = () => {
       ],
     },
     sudo: {
-      title: "Sudo Commands",
+      title: "Sudo",
       icon: Shield,
       commands: [
         { cmd: "/stats", desc: "View bot statistics" },
@@ -54,91 +49,76 @@ const Commands = () => {
   return (
     <section
       id="commands"
-      className="py-24 bg-white dark:bg-gray-800 relative overflow-hidden border-t border-gray-100 dark:border-gray-700"
+      className="py-24 bg-brand-surface dark:bg-slate-950 relative border-t border-brand-border dark:border-brand-border-dark"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark dark:text-white">
             Command Reference
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 text-lg">
-            Complete list of available commands organized by permission level
+          <p className="text-slate-500 dark:text-slate-400 text-lg">
+            Complete list of available commands organized by permission level.
           </p>
         </div>
 
-        {/* Tab Selector */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(commandCategories).map(([key, category]) => {
-            const Icon = category.icon;
-            return (
-              <button
-                key={key}
-                onClick={() => setActiveTab(key)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-md font-semibold transition-all duration-200 border ${
-                  activeTab === key
-                    ? "bg-brand-dark border-brand-dark text-white dark:bg-brand-primary dark:border-brand-primary dark:text-brand-dark"
-                    : "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700"
-                }`}
-              >
-                <Icon className="w-5 h-5" />
-                {category.title}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Commands Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {commandCategories[activeTab].commands.map((command, index) => (
-            <div
-              key={index}
-              className="group bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-gray-300 transition-colors duration-200 relative overflow-hidden"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              <div className="flex items-start gap-3 relative z-10">
-                <Terminal className="w-5 h-5 text-gray-400 mt-1 flex-shrink-0" />
-                <div>
-                  <code className="text-lg font-mono text-brand-dark dark:text-white font-bold">
-                    {command.cmd}
-                  </code>
-                  <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">{command.desc}</p>
-                </div>
-              </div>
+        <div className="flex flex-col md:flex-row gap-8 lg:gap-16">
+          {/* Sidebar */}
+          <div className="md:w-64 flex-shrink-0">
+            <div className="flex flex-row md:flex-col gap-2 overflow-x-auto pb-4 md:pb-0">
+              {Object.entries(commandCategories).map(([key, category]) => {
+                const Icon = category.icon;
+                const isActive = activeTab === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setActiveTab(key)}
+                    className={`flex items-center gap-3 px-4 py-3 text-sm font-medium transition-all ${
+                      isActive
+                        ? "text-brand-primary bg-brand-primary/10 border-l-2 border-brand-primary"
+                        : "text-slate-600 dark:text-slate-400 hover:text-brand-dark dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-900 border-l-2 border-transparent"
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    {category.title} Commands
+                  </button>
+                );
+              })}
             </div>
-          ))}
-        </div>
+            
+            <div className="hidden md:block mt-8 p-4 bg-slate-50 dark:bg-slate-900/50 border border-brand-border dark:border-brand-border-dark text-sm text-slate-500 dark:text-slate-400 rounded-sm">
+              <div className="flex items-center gap-2 mb-2 text-brand-dark dark:text-white font-semibold">
+                <CmdIcon className="w-4 h-4" />
+                Pro Tip
+              </div>
+              <p>Type <code className="font-mono text-brand-primary">/help</code> in any chat where the bot is active to get an inline menu.</p>
+            </div>
+          </div>
 
-        {/* Command Usage Note */}
-        <div className="mt-12 bg-brand-surface dark:bg-gray-800/50 border border-brand-accent/50 dark:border-gray-700 p-6 rounded-xl max-w-3xl mx-auto">
-          <h3 className="text-lg font-semibold mb-3 flex items-center gap-2 text-brand-dark dark:text-white">
-            <Terminal className="w-5 h-5 text-brand-primary" />
-            Usage Notes
-          </h3>
-          <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-            <li className="flex items-start gap-2">
-              <span className="text-brand-primary mt-1 font-bold">•</span>
-              <span>
-                Admin commands require administrator privileges in the group
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-brand-primary mt-1 font-bold">•</span>
-              <span>
-                Sudo commands are restricted to bot owner and authorized sudo
-                users
-              </span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-brand-primary mt-1 font-bold">•</span>
-              <span>
-                Use{" "}
-                <code className="text-brand-primary font-mono px-1 font-semibold">
-                  /help
-                </code>{" "}
-                in Telegram to see command examples and syntax
-              </span>
-            </li>
-          </ul>
+          {/* Content */}
+          <div className="flex-1">
+            <div className="border border-brand-border dark:border-brand-border-dark bg-white dark:bg-brand-dark overflow-hidden rounded-sm">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 dark:bg-slate-900/80 border-b border-brand-border dark:border-brand-border-dark">
+                    <th className="py-4 px-6 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider w-1/3">Command</th>
+                    <th className="py-4 px-6 text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Description</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-brand-border dark:divide-brand-border-dark">
+                  {commandCategories[activeTab].commands.map((command, index) => (
+                    <tr key={index} className="hover:bg-slate-50/50 dark:hover:bg-slate-900/30 transition-colors">
+                      <td className="py-4 px-6 font-mono text-sm font-semibold text-brand-dark dark:text-white">
+                        {command.cmd}
+                      </td>
+                      <td className="py-4 px-6 text-sm text-slate-600 dark:text-slate-400">
+                        {command.desc}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </section>

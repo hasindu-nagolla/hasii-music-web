@@ -15,7 +15,7 @@ const Footer = () => {
     ],
     community: [
       { name: "Telegram Channel", href: "https://t.me/hasiimusic" },
-      { name: "Support Group", href: "https://t.me/+VWlXK8QrYfZlYjNl" },
+      { name: "Support Group", href: "https://t.me/TheInfinityAI" },
       {
         name: "Contribute",
         href: "https://github.com/hasindu-nagolla/HasiiMusicBot/pulls",
@@ -38,7 +38,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative z-10 bg-brand-surface-light dark:bg-gray-900 border-t border-gray-100 dark:border-gray-700 mt-20">
+    <footer className="relative z-10 bg-white dark:bg-brand-dark border-t border-brand-border dark:border-brand-border-dark mt-20">
       {/* Huge Pre-Footer CTA */}
       <div className="py-24 text-center">
         <h2 className="text-3xl font-bold text-brand-dark dark:text-white mb-4">
@@ -52,13 +52,13 @@ const Footer = () => {
           href="https://t.me/HasiMusicBot?startgroup=true"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-8 py-4 rounded-md font-semibold text-white dark:text-brand-dark bg-brand-dark dark:bg-brand-primary hover:bg-gray-800 dark:hover:bg-brand-primary/90 active:scale-95 transition-all duration-200"
+          className="inline-block px-8 py-3.5 rounded-sm font-semibold text-white dark:text-brand-dark bg-brand-dark dark:bg-brand-primary hover:bg-slate-800 dark:hover:bg-brand-primary/90 active:scale-[0.98] transition-all duration-200"
         >
           Get in touch
         </a>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-gray-100 dark:border-gray-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-border dark:border-brand-border-dark">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -80,7 +80,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://t.me/+VWlXK8QrYfZlYjNl"
+                href="https://t.me/TheInfinityAI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 dark:bg-gray-800 hover:text-brand-primary transition-colors"
@@ -158,7 +158,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 mt-12 border-t border-gray-100 dark:border-gray-700">
+        <div className="pt-8 mt-12 border-t border-brand-border dark:border-brand-border-dark">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 dark:text-gray-400 text-sm text-center md:text-left">
               © {currentYear} HasiiMusicBot. All rights reserved. Developed by{" "}

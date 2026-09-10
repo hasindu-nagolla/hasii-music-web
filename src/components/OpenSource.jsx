@@ -1,81 +1,64 @@
-import { Github, FileText, Users } from "lucide-react";
+import { Github, FileText, Users, ArrowRight } from "lucide-react";
 
 const OpenSource = () => {
   return (
-    <section className="py-24 bg-brand-surface dark:bg-gray-900/50 relative overflow-hidden border-t border-gray-100 dark:border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark dark:text-white">
-            Open Source & Collaboration
-          </h2>
-          <p className="text-gray-500 dark:text-gray-400 text-lg max-w-2xl mx-auto">
-            HasiiMusicBot is built in the open. We welcome contributions from developers to improve the project.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {/* GitHub Repo */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 text-brand-dark dark:text-white rounded-full flex items-center justify-center mb-6">
-              <Github className="w-6 h-6" />
-            </div>
-            <h3 className="font-bold text-xl text-brand-dark dark:text-white mb-3">
-              Source Code
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">
-              The entire source code is available on GitHub. You can fork it, inspect the code, and host it yourself.
+    <section className="py-24 bg-white dark:bg-brand-dark relative border-t border-brand-border dark:border-brand-border-dark">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="grid lg:grid-cols-12 gap-8 items-center bg-slate-50 dark:bg-slate-900 border border-brand-border dark:border-brand-border-dark rounded-sm p-8 md:p-12">
+          
+          <div className="lg:col-span-5 mb-8 lg:mb-0">
+            <h2 className="text-3xl font-bold mb-4 text-brand-dark dark:text-white">
+              Open Source & Free
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-lg mb-8">
+              HasiiMusicBot is built in the open. We believe in transparent development and community-driven improvements.
             </p>
             <a
               href="https://github.com/hasindu-nagolla/HasiiMusicBot"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto font-semibold text-brand-primary hover:text-brand-dark dark:text-white transition-colors"
+              className="inline-flex items-center gap-2 bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark px-6 py-3 rounded-sm font-medium hover:bg-slate-800 dark:hover:bg-brand-primary/90 transition-colors"
             >
-              View Repository →
+              <Github className="w-4 h-4" />
+              View on GitHub
             </a>
           </div>
 
-          {/* Collaboration */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 text-brand-dark dark:text-white rounded-full flex items-center justify-center mb-6">
-              <Users className="w-6 h-6" />
-            </div>
-            <h3 className="font-bold text-xl text-brand-dark dark:text-white mb-3">
-              Contribute
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">
-              We actively accept pull requests. Whether it's fixing bugs or adding features, your help is appreciated.
-            </p>
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
             <a
               href="https://github.com/hasindu-nagolla/HasiiMusicBot/pulls"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto font-semibold text-brand-primary hover:text-brand-dark dark:text-white transition-colors"
+              className="group bg-white dark:bg-brand-dark border border-brand-border dark:border-brand-border-dark p-6 hover:border-brand-primary dark:hover:border-brand-primary transition-colors flex flex-col items-start rounded-sm"
             >
-              Submit a PR →
+              <Users className="w-5 h-5 text-slate-400 group-hover:text-brand-primary transition-colors mb-4" />
+              <h3 className="font-semibold text-brand-dark dark:text-white mb-2">Contribute</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
+                We actively accept pull requests. Help us fix bugs and add features.
+              </p>
+              <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-brand-primary">
+                Submit PR <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+              </div>
             </a>
-          </div>
-
-          {/* License */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 flex flex-col items-center text-center">
-            <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 text-brand-dark dark:text-white rounded-full flex items-center justify-center mb-6">
-              <FileText className="w-6 h-6" />
-            </div>
-            <h3 className="font-bold text-xl text-brand-dark dark:text-white mb-3">
-              GPL v3 License
-            </h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">
-              This project is licensed under the GNU General Public License v3.0, ensuring it remains free and open.
-            </p>
+            
             <a
               href="https://github.com/hasindu-nagolla/HasiiMusicBot/blob/main/LICENSE"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto font-semibold text-brand-primary hover:text-brand-dark dark:text-white transition-colors"
+              className="group bg-white dark:bg-brand-dark border border-brand-border dark:border-brand-border-dark p-6 hover:border-brand-primary dark:hover:border-brand-primary transition-colors flex flex-col items-start rounded-sm"
             >
-              Read License →
+              <FileText className="w-5 h-5 text-slate-400 group-hover:text-brand-primary transition-colors mb-4" />
+              <h3 className="font-semibold text-brand-dark dark:text-white mb-2">GPL v3 License</h3>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
+                Ensuring this project remains free, open, and available for everyone.
+              </p>
+              <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-brand-primary">
+                Read License <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+              </div>
             </a>
           </div>
+          
         </div>
       </div>
     </section>

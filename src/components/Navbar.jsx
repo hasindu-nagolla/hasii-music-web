@@ -26,11 +26,11 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 dark:bg-brand-dark/90 backdrop-blur-md shadow-sm dark:shadow-gray-800/50" : "bg-transparent"
+        isScrolled ? "bg-white/80 dark:bg-brand-dark/80 backdrop-blur-md border-b border-brand-border dark:border-brand-border-dark" : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#home">
             <Logo className="h-12 w-auto" />
@@ -62,7 +62,7 @@ const Navbar = () => {
               href="https://t.me/hasiimusic"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black dark:bg-brand-primary text-white dark:text-brand-dark px-5 py-2.5 rounded-md text-sm font-semibold hover:bg-gray-800 dark:hover:bg-brand-primary/90 transition-colors"
+              className="bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark px-4 py-2 rounded-sm text-sm font-semibold hover:bg-slate-800 dark:hover:bg-brand-primary/90 transition-colors"
             >
               Get in touch
             </a>
@@ -110,7 +110,7 @@ const Navbar = () => {
               href="https://t.me/HasiMusicBot?startgroup=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black dark:bg-brand-primary text-white dark:text-brand-dark block text-center py-3 rounded-md font-semibold mt-4"
+              className="bg-brand-dark dark:bg-brand-primary text-white dark:text-brand-dark block text-center py-3 rounded-sm font-semibold mt-4"
             >
               Get in touch
             </a>

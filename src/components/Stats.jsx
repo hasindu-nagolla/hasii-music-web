@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Users, Music as MusicIcon, Radio, TrendingUp } from "lucide-react";
+import { Users, Music as MusicIcon, Radio, TrendingUp, MessageCircle } from "lucide-react";
 
 const Stats = () => {
   const [counters, setCounters] = useState({
     groups: 0,
+    chats: 0,
     songs: 0,
     stations: 0,
     uptime: 0,
@@ -13,42 +14,42 @@ const Stats = () => {
     {
       icon: Users,
       label: "Served Groups",
-      value: "600+",
       target: 600,
       key: "groups",
+      suffix: "+",
     },
      {
-      icon: Users,
+      icon: MessageCircle,
       label: "Active Chats",
-      value: "200+",
       target: 200,
       key: "chats",
+      suffix: "+",
     },
     {
       icon: MusicIcon,
       label: "Songs Played",
-      value: "200K+",
-      target: 200000,
+      target: 200,
       key: "songs",
+      suffix: "K+",
     },
     {
       icon: Radio,
       label: "Radio Stations",
-      value: "70+",
       target: 70,
       key: "stations",
+      suffix: "+",
     },
     {
       icon: TrendingUp,
       label: "Uptime",
-      value: "90%",
-      target: 90,
+      target: 99,
       key: "uptime",
+      suffix: "%",
     },
   ];
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
     const steps = 60;
     const interval = duration / steps;
 
@@ -73,40 +74,33 @@ const Stats = () => {
   return (
     <section
       id="stats"
-      className="py-24 bg-brand-surface dark:bg-gray-900/50 relative overflow-hidden"
+      className="py-24 bg-white dark:bg-brand-dark relative border-t border-brand-border dark:border-brand-border-dark"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark dark:text-white">
-            Trusted by the community
-          </h2>
-          <p className="text-gray-500 dark:text-gray-400 text-lg">
-            Join the growing network of music lovers around the world on Telegram
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+          <div className="max-w-xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-dark dark:text-white leading-tight">
+              Trusted by the community
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 mt-4">
+              Join the growing network of music lovers around the world on Telegram.
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-brand-border dark:bg-brand-border-dark border border-brand-border dark:border-brand-border-dark rounded-sm overflow-hidden">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
               <div
                 key={index}
-                className="group relative bg-white dark:bg-gray-800 p-8 rounded-xl text-center border border-gray-100 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors duration-200"
-                style={{
-                  animationDelay: `${index * 0.1}s`,
-                }}
+                className="bg-white dark:bg-brand-dark p-8 flex flex-col items-center justify-center text-center group"
               >
-                <div className="inline-flex p-4 rounded-xl bg-brand-accent dark:bg-brand-primary/20 mb-4 text-brand-secondary dark:text-brand-primary transition-transform duration-300 group-hover:scale-110">
-                  <Icon className="w-8 h-8" />
+                <Icon className="w-5 h-5 text-slate-400 group-hover:text-brand-primary transition-colors duration-300 mb-4" />
+                <div className="text-4xl lg:text-5xl font-bold text-brand-dark dark:text-white mb-2 font-mono tracking-tight">
+                  {counters[stat.key]}{stat.suffix}
                 </div>
-                <div className="text-4xl font-bold mb-2 text-brand-dark dark:text-white">
-                  {stat.key === "songs"
-                    ? Math.floor(counters[stat.key] / 1000) + "K+"
-                    : stat.key === "uptime"
-                      ? counters[stat.key] + "%"
-                      : counters[stat.key] + "+"}
-                </div>
-                <div className="text-gray-500 dark:text-gray-400 font-medium">{stat.label}</div>
+                <div className="text-xs uppercase tracking-widest text-slate-500 font-semibold">{stat.label}</div>
               </div>
             );
           })}
