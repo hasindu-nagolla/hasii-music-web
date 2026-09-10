@@ -6,7 +6,7 @@ import {
   Radio,
   Headphones,
   ListMusic,
-  Sliders,
+  Disc,
   Languages,
 } from "lucide-react";
 
@@ -47,9 +47,9 @@ const featuresList = [
     desc: "Easily skip, pause, resume, and loop tracks to effortlessly manage large playlists.",
   },
   {
-    icon: Sliders,
-    title: "Audio Filters",
-    desc: "Customize sound with advanced filters. We implement bass boost, nightcore, and speed controls.",
+    icon: Disc,
+    title: "Spotify Integration",
+    desc: "Seamlessly play tracks, playlists, and albums directly from Spotify links.",
   },
   {
     icon: Languages,

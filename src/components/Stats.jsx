@@ -14,7 +14,7 @@ const Stats = () => {
     {
       icon: Users,
       label: "Served Groups",
-      target: 600,
+      target: 650,
       key: "groups",
       suffix: "+",
     },
